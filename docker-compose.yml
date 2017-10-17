@@ -1,0 +1,33 @@
+# docker-compose.yml
+version: '2'
+
+services:
+    php:
+        build:
+            context: php7-fpm
+            args:
+                TIMEZONE: ${TIMEZONE}
+        group_add:
+          - www-data
+        volumes:
+          - ${SYMFONY_APP_PATH}:/var/www/ryuutama
+
+    nginx:
+        build: nginx
+        ports:
+            - 80:80
+        group_add:
+          - www-data
+        volumes_from:
+          - php
+        volumes:
+          - ./logs/nginx:/var/log/nginx/ryuutama
+    db:
+        image: mysql
+        volumes:
+            - "./.data/db:/var/lib/mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
