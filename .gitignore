@@ -18,3 +18,5 @@
 /.idea
 /.data
 .env
+/logs/*
+!logs/.gitkeep

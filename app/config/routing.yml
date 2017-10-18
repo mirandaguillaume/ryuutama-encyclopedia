@@ -1,3 +1,7 @@
+encyclopeadia:
+    resource: "@EncyclopeadiaBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

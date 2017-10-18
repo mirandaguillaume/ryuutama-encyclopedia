@@ -1,0 +1,3 @@
+encyclopeadia_homepage:
+    path:     /
+    defaults: { _controller: EncyclopeadiaBundle:Default:index }

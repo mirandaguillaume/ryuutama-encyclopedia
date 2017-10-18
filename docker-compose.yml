@@ -11,6 +11,11 @@ services:
           - www-data
         volumes:
           - ${SYMFONY_APP_PATH}:/var/www/ryuutama
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
     nginx:
         build: nginx
@@ -26,8 +31,14 @@ services:
         image: mysql
         volumes:
             - "./.data/db:/var/lib/mysql"
+        restart: always
         environment:
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+          - 8080:8080

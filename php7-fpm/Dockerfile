@@ -17,6 +17,7 @@ RUN "date"
 
 # Type docker-php-ext-install to see available extensions
 RUN docker-php-ext-install intl
+RUN docker-php-ext-install pdo_mysql
 
 RUN echo 'alias sf="php app/console"' >> ~/.bashrc
 RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
@@ -27,3 +28,5 @@ WORKDIR /var/www/ryuutama
 
 RUN chown 1000:1000 /var/www/ryuutama
 RUN chown -R 1000:1000 /var/www/ryuutama
+
+USER www-data
