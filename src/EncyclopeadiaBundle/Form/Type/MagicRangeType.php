@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 20/10/17
- * Time: 09:20
+ * Time: 09:20.
  */
 
 namespace EncyclopeadiaBundle\Form\Type;
@@ -23,7 +23,7 @@ class MagicRangeType extends AbstractType
                 'Caster' => MagicConstants::SPELLCASTER,
                 'Close area' => MagicConstants::CLOSE,
                 'All areas' => MagicConstants::FAR,
-                'All' => MagicConstants::ILLIMITED
+                'All' => MagicConstants::ILLIMITED,
             ),
             'choices_as_values' => true,
         ));

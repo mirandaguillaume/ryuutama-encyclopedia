@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 20/10/17
- * Time: 09:15
+ * Time: 09:15.
  */
 
 namespace EncyclopeadiaBundle\Form\Type;

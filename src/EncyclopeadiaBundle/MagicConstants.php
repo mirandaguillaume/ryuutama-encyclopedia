@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 18/10/17
- * Time: 12:12
+ * Time: 12:12.
  */
 
 namespace EncyclopeadiaBundle;
@@ -27,29 +27,29 @@ class MagicConstants
     const ILLIMITED = 'ILLIMITED';
 
     const MAGIC_CASTING_TYPE = [
-        MagicConstants::NORMAL,
-        MagicConstants::RITUAL,
+        self::NORMAL,
+        self::RITUAL,
     ];
 
     const MAGIC_TYPE = [
-        MagicConstants::FALL,
-        MagicConstants::SPRING,
-        MagicConstants::SUMMER,
-        MagicConstants::WINTER,
-        MagicConstants::INCANTATION
+        self::FALL,
+        self::SPRING,
+        self::SUMMER,
+        self::WINTER,
+        self::INCANTATION,
     ];
 
     const MAGIC_LEVEL = [
-        MagicConstants::LOW_LEVEL,
-        MagicConstants::MID_LEVEL,
-        MagicConstants::HIGH_LEVEL
+        self::LOW_LEVEL,
+        self::MID_LEVEL,
+        self::HIGH_LEVEL,
     ];
 
     const MAGIC_RANGE = [
-        MagicConstants::TOUCH,
-        MagicConstants::SPELLCASTER,
-        MagicConstants::CLOSE,
-        MagicConstants::FAR,
-        MagicConstants::ILLIMITED
+        self::TOUCH,
+        self::SPELLCASTER,
+        self::CLOSE,
+        self::FAR,
+        self::ILLIMITED,
     ];
 }

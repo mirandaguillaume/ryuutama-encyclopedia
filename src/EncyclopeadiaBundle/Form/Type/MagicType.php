@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 20/10/17
- * Time: 09:28
+ * Time: 09:28.
  */
 
 namespace EncyclopeadiaBundle\Form\Type;
@@ -23,7 +23,7 @@ class MagicType extends AbstractType
                 'Spring' => MagicConstants::SPRING,
                 'Summer' => MagicConstants::SUMMER,
                 'Winter' => MagicConstants::WINTER,
-                'Incantation' => MagicConstants::INCANTATION
+                'Incantation' => MagicConstants::INCANTATION,
             ),
             'choices_as_values' => true,
         ));
