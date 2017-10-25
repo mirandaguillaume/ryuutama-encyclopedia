@@ -3,11 +3,13 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@EncyclopeadiaBundle/Resources/config/services.yml" }
+    - { resource: easy_admin.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    app.path.character_class_images: /uploads/images/character_class
 
 framework:
     #esi: ~
@@ -63,18 +65,9 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-easy_admin:
-    entities:
-        Magic:
-            class: EncyclopeadiaBundle\Entity\Magic
-            form:
-                fields:
-                    - { property: 'name', label: 'Name', type_options: { required: true } }
-                    - { property: 'mpCost', label: 'MP Cost', type_options: { required: true } }
-                    - { property: 'duration', label: 'Duration', type_options: { required: true } }
-                    - { property: 'target', label: 'Target', type_options: { required: true } }
-                    - { property: 'level', label: 'Level', type: 'EncyclopeadiaBundle\FormTypes\MagicLevelType', type_options: { required: true } }
-                    - { property: 'spell_range', label: 'Range', type: 'EncyclopeadiaBundle\FormTypes\MagicRangeType', type_options: { required: true } }
-                    - { property: 'casting_time', label: 'Casting Time', type: 'EncyclopeadiaBundle\FormTypes\CastingTimeType', type_options: { required: true } }
-                    - { property: 'type', label: 'Type', type: 'EncyclopeadiaBundle\FormTypes\MagicType', type_options: { required: true } }
-                    - { property: 'description', label: 'Description', type: 'textarea', type_options: { required: true } }
+vich_uploader:
+    db_driver: orm
+    mappings:
+        character_class_images:
+            uri_prefix:         '%app.path.character_class_images%'
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/character_class'

@@ -1,0 +1,27 @@
+EncyclopeadiaBundle\Entity\CharacterClass:
+    type: entity
+    table: null
+    repositoryClass: EncyclopeadiaBundle\Repository\ClassRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+        image:
+            type: string
+            length: 255
+        exampleJobs:
+            type: text
+            column: example_jobs
+        exampleActions:
+            type: text
+            column: example_actions
+        description:
+            type: text
+    lifecycleCallbacks: {  }
