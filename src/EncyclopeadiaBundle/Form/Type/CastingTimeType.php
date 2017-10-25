@@ -6,7 +6,7 @@
  * Time: 09:27
  */
 
-namespace EncyclopeadiaBundle\FormTypes;
+namespace EncyclopeadiaBundle\Form\Type;
 
 use EncyclopeadiaBundle\MagicConstants;
 use Symfony\Component\Form\AbstractType;

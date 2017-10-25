@@ -1,5 +1,6 @@
 {
-    "name": "guillaume/.checkout",
+    "name": "guillaume/ryuutama-encyclopedia",
+    "description": "A Ryuutama encyclopedia",
     "license": "proprietary",
     "type": "project",
     "autoload": {
