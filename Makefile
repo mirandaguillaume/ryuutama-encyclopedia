@@ -39,10 +39,10 @@ update-hosts:
 	@sudo /bin/sh -c 'echo `docker inspect -f {{.NetworkSettings.Networks.$(COMPOSE_PROJECT_NAME)_default.IPAddress}} $(COMPOSE_PROJECT_NAME)_nginx_1`	"ryuutama.dev adminer.ssu.dev" >> /etc/hosts'
 
 phpcs:
-	bin/php-cs-fixer fix src --config=.php_cs
+	bin/php-cs-fixer fix src --rules="@Symfony"
 
 phpcs-dry:
-	bin/php-cs-fixer fix src --dry-run --config=.php_cs
+	bin/php-cs-fixer fix src --dry-run --rules="@Symfony"
 
 cache-clear:
 	docker-compose exec --user www-data php rm -rf app/cache/*
