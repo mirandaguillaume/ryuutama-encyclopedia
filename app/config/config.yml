@@ -68,3 +68,19 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+easy_admin:
+    entities:
+        Magic:
+            class: EncyclopeadiaBundle\Entity\Magic
+            form:
+                fields:
+                    - { property: 'name', label: 'Name', type_options: { required: true } }
+                    - { property: 'mpCost', label: 'MP Cost', type_options: { required: true } }
+                    - { property: 'duration', label: 'Duration', type_options: { required: true } }
+                    - { property: 'target', label: 'Target', type_options: { required: true } }
+                    - { property: 'level', label: 'Level', type: 'EncyclopeadiaBundle\FormTypes\MagicLevelType', type_options: { required: true } }
+                    - { property: 'spell_range', label: 'Range', type: 'EncyclopeadiaBundle\FormTypes\MagicRangeType', type_options: { required: true } }
+                    - { property: 'casting_time', label: 'Casting Time', type: 'EncyclopeadiaBundle\FormTypes\CastingTimeType', type_options: { required: true } }
+                    - { property: 'type', label: 'Type', type: 'EncyclopeadiaBundle\FormTypes\MagicType', type_options: { required: true } }
+                    - { property: 'description', label: 'Description', type: 'textarea', type_options: { required: true } }

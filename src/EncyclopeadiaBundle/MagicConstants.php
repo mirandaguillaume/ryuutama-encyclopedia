@@ -8,9 +8,6 @@
 
 namespace EncyclopeadiaBundle;
 
-
-use EncyclopeadiaBundle\Entity\Magic;
-
 class MagicConstants
 {
     const NORMAL = 'NORMAL';

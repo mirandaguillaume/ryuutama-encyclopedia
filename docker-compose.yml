@@ -1,44 +1,37 @@
 # docker-compose.yml
-version: '2'
+version: '3.3'
 
 services:
-    php:
-        build:
-            context: php7-fpm
-            args:
-                TIMEZONE: ${TIMEZONE}
-        group_add:
-          - www-data
-        volumes:
-          - ${SYMFONY_APP_PATH}:/var/www/ryuutama
-        environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: ${MYSQL_DATABASE}
-            MYSQL_USER: ${MYSQL_USER}
-            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+  php:
+    build:
+      context: docker/php7-fpm
+      args:
+        TIMEZONE: ${TIMEZONE}
+    volumes:
+      - ${SYMFONY_APP_PATH}:/var/www/app
 
-    nginx:
-        build: nginx
-        ports:
-            - 80:80
-        group_add:
-          - www-data
-        volumes_from:
-          - php
-        volumes:
-          - ./logs/nginx:/var/log/nginx/ryuutama
-    db:
-        image: mysql
-        volumes:
-            - "./.data/db:/var/lib/mysql"
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: ${MYSQL_DATABASE}
-            MYSQL_USER: ${MYSQL_USER}
-            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    adminer:
-        image: adminer
-        restart: always
-        ports:
-          - 8080:8080
+  nginx:
+    build:
+      context: docker/nginx
+    ports:
+      - 80:80
+    volumes:
+      - ${SYMFONY_APP_PATH}:/var/www/app
+      - ${SYMFONY_APP_PATH}/logs/nginx:/var/log/nginx/ryuutama
+      - ${SYMFONY_APP_PATH}/docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ${SYMFONY_APP_PATH}/docker/nginx/sites-enabled:/etc/nginx/sites-enabled
+    labels:
+      fr.laposte.server.role: reserve-proxy
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - "./.data/db:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  adminer:
+    image: adminer

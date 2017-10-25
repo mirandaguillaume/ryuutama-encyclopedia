@@ -64,7 +64,7 @@ class Magic
      *
      * @return int
      */
-    public function getId() : integer
+    public function getId() : ?int
     {
         return $this->id;
     }
@@ -88,7 +88,7 @@ class Magic
      *
      * @return string
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -96,7 +96,7 @@ class Magic
     /**
      * Set mpCost
      *
-     * @param integer $mpCost
+     * @param int $mpCost
      *
      * @return Magic
      */
@@ -110,9 +110,9 @@ class Magic
     /**
      * Get mpCost
      *
-     * @return integer
+     * @return int
      */
-    public function getMPCost(): integer
+    public function getMPCost(): ?int
     {
         return $this->mpCost;
     }
@@ -136,7 +136,7 @@ class Magic
      *
      * @return string
      */
-    public function getDuration(): string
+    public function getDuration(): ?string
     {
         return $this->duration;
     }
@@ -160,7 +160,7 @@ class Magic
      *
      * @return string
      */
-    public function getTarget(): string
+    public function getTarget(): ?string
     {
         return $this->target;
     }
@@ -174,7 +174,7 @@ class Magic
      */
     public function setLevel($level): Magic
     {
-        if (in_array($level, MagicConstants::MAGIC_LEVEL)) {
+        if (in_array($level, MagicConstants::MAGIC_LEVEL, true)) {
             $this->level = $level;
         } else {
             throw new \UnexpectedValueException();
@@ -188,7 +188,7 @@ class Magic
      *
      * @return string
      */
-    public function getLevel(): string
+    public function getLevel(): ?string
     {
         return $this->level;
     }
@@ -202,7 +202,7 @@ class Magic
      */
     public function setSpellRange($spellRange): Magic
     {
-        if (in_array($spellRange, MagicConstants::MAGIC_RANGE)) {
+        if (in_array($spellRange, MagicConstants::MAGIC_RANGE, true)) {
             $this->spellRange = $spellRange;
         }
 
@@ -214,7 +214,7 @@ class Magic
      *
      * @return string
      */
-    public function getSpellRange(): string
+    public function getSpellRange(): ?string
     {
         return $this->spellRange;
     }
@@ -228,7 +228,7 @@ class Magic
      */
     public function setCastingTime($castingTime): Magic
     {
-        if (in_array($castingTime, MagicConstants::MAGIC_CASTING_TYPE)) {
+        if (in_array($castingTime, MagicConstants::MAGIC_CASTING_TYPE, true)) {
             $this->castingTime = $castingTime;
         }
 
@@ -240,7 +240,7 @@ class Magic
      *
      * @return string
      */
-    public function getCastingTime(): string
+    public function getCastingTime(): ?string
     {
         return $this->castingTime;
     }
@@ -264,7 +264,7 @@ class Magic
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -278,7 +278,7 @@ class Magic
      */
     public function setType($type): Magic
     {
-        if (in_array($type, MagicConstants::MAGIC_TYPE)) {
+        if (in_array($type, MagicConstants::MAGIC_TYPE, true)) {
             $this->type = $type;
         }
 
@@ -290,7 +290,7 @@ class Magic
      *
      * @return string
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }

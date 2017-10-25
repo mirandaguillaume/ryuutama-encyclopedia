@@ -13,29 +13,38 @@ EncyclopeadiaBundle\Entity\Magic:
             type: string
             length: 255
             unique: true
-        mPCost:
+            nullable: false
+        mpCost:
             type: integer
-            column: MP_Cost
+            column: mp_cost
+            nullable: false
         duration:
             type: string
             length: 255
+            nullable: false
         target:
             type: string
             length: 255
+            nullable: false
         level:
             type: string
             length: 255
+            nullable: false
         spellRange:
             type: string
             length: 255
             column: spell_range
+            nullable: false
         castingTime:
             type: string
             length: 255
             column: casting_time
+            nullable: false
         description:
             type: text
+            nullable: false
         type:
             type: string
             length: 255
+            nullable: false
     lifecycleCallbacks: {  }
