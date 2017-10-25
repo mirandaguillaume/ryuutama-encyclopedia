@@ -4,3 +4,4 @@ finder:
   path:
     - "app"
     - "bin"
+    - "web"
