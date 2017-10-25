@@ -1,1 +1,6 @@
 preset: symfony
+
+finder:
+  path:
+    - "app"
+    - "bin"
