@@ -1,7 +1,7 @@
 preset: symfony
 
 finder:
-  path:
+  exclude:
     - "app"
     - "bin"
     - "web"
