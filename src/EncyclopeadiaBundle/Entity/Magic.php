@@ -5,7 +5,7 @@ namespace EncyclopeadiaBundle\Entity;
 use EncyclopeadiaBundle\MagicConstants;
 
 /**
- * Magic
+ * Magic.
  */
 class Magic
 {
@@ -59,9 +59,8 @@ class Magic
      */
     private $type;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -71,7 +70,7 @@ class Magic
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -81,7 +80,7 @@ class Magic
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -95,7 +94,7 @@ class Magic
     }
 
     /**
-     * Get mpCost
+     * Get mpCost.
      *
      * @return int
      */
@@ -105,7 +104,7 @@ class Magic
     }
 
     /**
-     * Set mpCost
+     * Set mpCost.
      *
      * @param int $mpCost
      *
@@ -119,7 +118,7 @@ class Magic
     }
 
     /**
-     * Get duration
+     * Get duration.
      *
      * @return string
      */
@@ -129,7 +128,7 @@ class Magic
     }
 
     /**
-     * Set duration
+     * Set duration.
      *
      * @param string $duration
      *
@@ -143,7 +142,7 @@ class Magic
     }
 
     /**
-     * Get target
+     * Get target.
      *
      * @return string
      */
@@ -153,7 +152,7 @@ class Magic
     }
 
     /**
-     * Set target
+     * Set target.
      *
      * @param string $target
      *
@@ -167,7 +166,7 @@ class Magic
     }
 
     /**
-     * Get level
+     * Get level.
      *
      * @return string
      */
@@ -177,7 +176,7 @@ class Magic
     }
 
     /**
-     * Set level
+     * Set level.
      *
      * @param string $level
      *
@@ -195,7 +194,7 @@ class Magic
     }
 
     /**
-     * Get spellRange
+     * Get spellRange.
      *
      * @return string
      */
@@ -205,7 +204,7 @@ class Magic
     }
 
     /**
-     * Set spellRange
+     * Set spellRange.
      *
      * @param string $spellRange
      *
@@ -221,7 +220,7 @@ class Magic
     }
 
     /**
-     * Get castingTime
+     * Get castingTime.
      *
      * @return string
      */
@@ -231,7 +230,7 @@ class Magic
     }
 
     /**
-     * Set castingTime
+     * Set castingTime.
      *
      * @param string $castingTime
      *
@@ -247,7 +246,7 @@ class Magic
     }
 
     /**
-     * Get description
+     * Get description.
      *
      * @return string
      */
@@ -257,7 +256,7 @@ class Magic
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
      *
@@ -271,7 +270,7 @@ class Magic
     }
 
     /**
-     * Get type
+     * Get type.
      *
      * @return string
      */
@@ -281,7 +280,7 @@ class Magic
     }
 
     /**
-     * Set type
+     * Set type.
      *
      * @param string $type
      *
@@ -296,4 +295,3 @@ class Magic
         return $this;
     }
 }
-
