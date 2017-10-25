@@ -11,10 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 // This check prevents access to debug front controllers that are deployed by accident to production servers.
 // Feel free to remove this, extend it, or make something more sophisticated.
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 Debug::enable();
 
-(new \Symfony\Component\Dotenv\Dotenv())->load(__DIR__.'/../.env');
+(new \Symfony\Component\Dotenv\Dotenv())->load(__DIR__ . '/../.env');
 
 $kernel = new AppKernel('dev', true);
 if (PHP_VERSION_ID < 70000) {

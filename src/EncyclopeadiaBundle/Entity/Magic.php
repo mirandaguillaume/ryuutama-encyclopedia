@@ -1,6 +1,7 @@
 <?php
 
 namespace EncyclopeadiaBundle\Entity;
+
 use EncyclopeadiaBundle\MagicConstants;
 
 /**
@@ -64,9 +65,19 @@ class Magic
      *
      * @return int
      */
-    public function getId() : ?int
+    public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName(): ?string
+    {
+        return $this->name;
     }
 
     /**
@@ -84,13 +95,13 @@ class Magic
     }
 
     /**
-     * Get name
+     * Get mpCost
      *
-     * @return string
+     * @return int
      */
-    public function getName(): ?string
+    public function getMPCost(): ?int
     {
-        return $this->name;
+        return $this->mpCost;
     }
 
     /**
@@ -108,13 +119,13 @@ class Magic
     }
 
     /**
-     * Get mpCost
+     * Get duration
      *
-     * @return int
+     * @return string
      */
-    public function getMPCost(): ?int
+    public function getDuration(): ?string
     {
-        return $this->mpCost;
+        return $this->duration;
     }
 
     /**
@@ -132,13 +143,13 @@ class Magic
     }
 
     /**
-     * Get duration
+     * Get target
      *
      * @return string
      */
-    public function getDuration(): ?string
+    public function getTarget(): ?string
     {
-        return $this->duration;
+        return $this->target;
     }
 
     /**
@@ -156,13 +167,13 @@ class Magic
     }
 
     /**
-     * Get target
+     * Get level
      *
      * @return string
      */
-    public function getTarget(): ?string
+    public function getLevel(): ?string
     {
-        return $this->target;
+        return $this->level;
     }
 
     /**
@@ -184,13 +195,13 @@ class Magic
     }
 
     /**
-     * Get level
+     * Get spellRange
      *
      * @return string
      */
-    public function getLevel(): ?string
+    public function getSpellRange(): ?string
     {
-        return $this->level;
+        return $this->spellRange;
     }
 
     /**
@@ -210,13 +221,13 @@ class Magic
     }
 
     /**
-     * Get spellRange
+     * Get castingTime
      *
      * @return string
      */
-    public function getSpellRange(): ?string
+    public function getCastingTime(): ?string
     {
-        return $this->spellRange;
+        return $this->castingTime;
     }
 
     /**
@@ -236,13 +247,13 @@ class Magic
     }
 
     /**
-     * Get castingTime
+     * Get description
      *
      * @return string
      */
-    public function getCastingTime(): ?string
+    public function getDescription(): ?string
     {
-        return $this->castingTime;
+        return $this->description;
     }
 
     /**
@@ -260,13 +271,13 @@ class Magic
     }
 
     /**
-     * Get description
+     * Get type
      *
      * @return string
      */
-    public function getDescription(): ?string
+    public function getType(): ?string
     {
-        return $this->description;
+        return $this->type;
     }
 
     /**
@@ -283,16 +294,6 @@ class Magic
         }
 
         return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return string
-     */
-    public function getType(): ?string
-    {
-        return $this->type;
     }
 }
 
