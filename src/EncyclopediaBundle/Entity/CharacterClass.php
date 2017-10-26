@@ -65,6 +65,7 @@ class CharacterClass
 
     /**
      * @param PassiveSkill $skill
+     *
      * @return $this
      */
     public function addSkill(PassiveSkill $skill)
@@ -76,6 +77,7 @@ class CharacterClass
 
     /**
      * @param PassiveSkill $skill
+     *
      * @return $this
      */
     public function removeSkill(PassiveSkill $skill)
@@ -87,9 +89,11 @@ class CharacterClass
 
     /**
      * @param ArrayCollection $skills
+     *
      * @return $this
      */
-    public function setSkills(ArrayCollection $skills) {
+    public function setSkills(ArrayCollection $skills)
+    {
         $this->skills = $skills;
 
         return $this;
