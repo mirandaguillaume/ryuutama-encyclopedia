@@ -29,7 +29,7 @@ EncyclopediaBundle\Entity\PassiveSkill:
             nullable: true
             column: usable_circumstances
     manyToOne:
-        classe:
+        class:
           targetEntity: EncyclopediaBundle\Entity\CharacterClass
           inversedBy: skills
           joinColumn:
