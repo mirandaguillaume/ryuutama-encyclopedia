@@ -145,9 +145,11 @@ class PassiveSkill
 
     /**
      * @param CharacterClass $class
+     *
      * @return $this
      */
-    public function setClass(CharacterClass $class) {
+    public function setClass(CharacterClass $class)
+    {
         $this->class = $class;
 
         return $this;
@@ -156,7 +158,8 @@ class PassiveSkill
     /**
      * @return CharacterClass
      */
-    public function getClass() {
+    public function getClass()
+    {
         return $this->class;
     }
 }
