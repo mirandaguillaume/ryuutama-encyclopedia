@@ -29,10 +29,10 @@ EncyclopediaBundle\Entity\PassiveSkill:
             nullable: true
             column: usable_circumstances
     manyToOne:
-        product:
-          targetEntity: Product
-          inversedBy: features
+        classe:
+          targetEntity: EncyclopediaBundle\Entity\CharacterClass
+          inversedBy: skills
           joinColumn:
-            name: product_id
+            name: class_id
             referencedColumnName: id
     lifecycleCallbacks: {  }
