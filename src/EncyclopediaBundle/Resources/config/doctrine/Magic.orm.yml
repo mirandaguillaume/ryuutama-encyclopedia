@@ -1,7 +1,7 @@
-EncyclopeadiaBundle\Entity\Magic:
+EncyclopediaBundle\Entity\Magic:
     type: entity
     table: null
-    repositoryClass: EncyclopeadiaBundle\Repository\MagicRepository
+    repositoryClass: EncyclopediaBundle\Repository\MagicRepository
     id:
         id:
             type: integer

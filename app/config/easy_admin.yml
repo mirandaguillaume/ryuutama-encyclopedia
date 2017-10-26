@@ -1,25 +1,55 @@
 easy_admin:
     entities:
         Magic:
-            class: EncyclopeadiaBundle\Entity\Magic
+            class: EncyclopediaBundle\Entity\Magic
+            list:
+                fields:
+                    - { property: 'name', label: 'Name', sortable: false}
+                    - { property: 'type', label: 'Type', sortable: true }
+                    - { property: 'level', label: 'Level', sortable: true }
+                    - { property: 'castingTime', label: 'Casting Time', sortable: true }
             form:
                 fields:
                     - { property: 'name', label: 'Name', type_options: { required: true } }
                     - { property: 'mpCost', label: 'MP Cost', type_options: { required: true } }
                     - { property: 'duration', label: 'Duration', type_options: { required: true } }
                     - { property: 'target', label: 'Target', type_options: { required: true } }
-                    - { property: 'level', label: 'Level', type: 'EncyclopeadiaBundle\FormTypes\MagicLevelType', type_options: { required: true } }
-                    - { property: 'spell_range', label: 'Range', type: 'EncyclopeadiaBundle\FormTypes\MagicRangeType', type_options: { required: true } }
-                    - { property: 'casting_time', label: 'Casting Time', type: 'EncyclopeadiaBundle\FormTypes\CastingTimeType', type_options: { required: true } }
-                    - { property: 'type', label: 'Type', type: 'EncyclopeadiaBundle\FormTypes\MagicType', type_options: { required: true } }
+                    - { property: 'level', label: 'Level', type: 'EncyclopediaBundle\FormTypes\MagicLevelType', type_options: { required: true } }
+                    - { property: 'spellRange', label: 'Range', type: 'EncyclopediaBundle\FormTypes\MagicRangeType', type_options: { required: true } }
+                    - { property: 'castingTime', label: 'Casting Time', type: 'EncyclopediaBundle\FormTypes\CastingTimeType', type_options: { required: true } }
+                    - { property: 'type', label: 'Type', type: 'EncyclopediaBundle\FormTypes\MagicType', type_options: { required: true } }
                     - { property: 'description', label: 'Description', type: 'ckeditor', type_options: { required: true } }
 
         CharacterClass:
-            class: EncyclopeadiaBundle\Entity\CharacterClass
+            class: EncyclopediaBundle\Entity\CharacterClass
+            list:
+                fields:
+                    - { property: 'name', label: 'Name' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.character_class_images%' }
             form:
                 fields:
                     - { property: 'name', label: 'Name', type_options: { required: true } }
                     - { property: 'description', label: 'Description', type: 'ckeditor', type_options: { required: true } }
-                    - { property: 'example_jobs', label: 'Jobs Examples', type: 'ckeditor', type_options: { required: true } }
-                    - { property: 'example_actions', label: 'Actions Examples', type: 'ckeditor', type_options: { required: true } }
-                    - { property: 'image', type: 'vich_image', label: 'Photo', base_path: '%app.path.character_class_images%' }
+                    - { property: 'exampleJobs', label: 'Jobs Examples', type: 'ckeditor', type_options: { required: true } }
+                    - { property: 'exampleActions', label: 'Actions Examples', type: 'ckeditor', type_options: { required: true } }
+                    - { property: 'imageFile', type: 'vich_image', label: 'Photo', base_path: '%app.path.character_class_images%' }
+
+        PassiveSkill:
+            class: EncyclopediaBundle\Entity\PassiveSkill
+            form:
+                fields:
+                    - { property: 'name', label: 'Name', type_options: { required : true } }
+                    - { property: 'description', label: 'Description', type: 'ckeditor', type_options: { required: true } }
+                    - { property: 'effect', label: 'Effect', type: 'ckeditor', type_options: { required: true } }
+                    - { property: 'usableCircumstances', label: 'Usable Circumstances', type: 'ckeditor', type_options: { required: false } }
+
+        ActiveSkill:
+            class: EncyclopediaBundle\Entity\ActiveSkill
+            form:
+                fields:
+                    - { property: 'name', label: 'Name', type_options: { required : true } }
+                    - { property: 'description', label: 'Description', type: 'ckeditor', type_options: { required: true } }
+                    - { property: 'effect', label: 'Effect', type: 'ckeditor', type_options: { required: true } }
+                    - { property: 'usableCircumstances', label: 'Usable Circumstances', type: 'ckeditor', type_options: { required: false } }
+                    - { property: 'usedStat', label: 'Used Stats', type_options: { required: true } }
+                    - { property: 'targetNumber', label: 'Target Number', type_options: { required: true } }

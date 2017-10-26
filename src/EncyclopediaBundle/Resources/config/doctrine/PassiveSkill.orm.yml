@@ -1,0 +1,38 @@
+EncyclopediaBundle\Entity\PassiveSkill:
+    type: entity
+    table: null
+    repositoryClass: EncyclopediaBundle\Repository\PassiveSkillRepository
+    inheritanceType: SINGLE_TABLE
+    discriminatorColumn:
+        name: discr
+        type: string
+    discriminatorMap:
+        active: ActiveSkill
+        passive: PassiveSkill
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+        effect:
+            type: text
+        description:
+            type: text
+        usableCircumstances:
+            type: text
+            nullable: true
+            column: usable_circumstances
+    manyToOne:
+        product:
+          targetEntity: Product
+          inversedBy: features
+          joinColumn:
+            name: product_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

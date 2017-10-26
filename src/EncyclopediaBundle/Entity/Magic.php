@@ -1,8 +1,8 @@
 <?php
 
-namespace EncyclopeadiaBundle\Entity;
+namespace EncyclopediaBundle\Entity;
 
-use EncyclopeadiaBundle\MagicConstants;
+use EncyclopediaBundle\MagicConstants;
 
 /**
  * Magic.

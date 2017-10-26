@@ -6,9 +6,9 @@
  * Time: 09:15.
  */
 
-namespace EncyclopeadiaBundle\Form\Type;
+namespace EncyclopediaBundle\Form\Type;
 
-use EncyclopeadiaBundle\MagicConstants;
+use EncyclopediaBundle\MagicConstants;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;

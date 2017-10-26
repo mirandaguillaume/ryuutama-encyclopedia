@@ -1,0 +1,4 @@
+encyclopeadia_homepage:
+    path:     /
+    methods: [GET]
+    defaults: { _controller: EncyclopediaBundle:Default:index }

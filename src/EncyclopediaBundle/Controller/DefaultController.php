@@ -1,6 +1,6 @@
 <?php
 
-namespace EncyclopeadiaBundle\Controller;
+namespace EncyclopediaBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('EncyclopeadiaBundle:Default:index.html.twig');
+        return $this->render('EncyclopediaBundle:Default:index.html.twig');
     }
 }

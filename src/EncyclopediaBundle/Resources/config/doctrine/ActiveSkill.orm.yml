@@ -1,0 +1,14 @@
+EncyclopediaBundle\Entity\ActiveSkill:
+    type: entity
+    table: null
+    repositoryClass: EncyclopediaBundle\Repository\ActiveSkillRepository
+    fields:
+        usedStat:
+            type: string
+            length: 7
+            column: used_stat
+        targetNumber:
+            type: string
+            length: 255
+            column: target_number
+    lifecycleCallbacks: {  }

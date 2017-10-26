@@ -1,6 +1,6 @@
 <?php
 
-namespace EncyclopeadiaBundle\Tests\Controller;
+namespace EncyclopediaBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

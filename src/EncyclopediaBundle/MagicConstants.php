@@ -6,7 +6,7 @@
  * Time: 12:12.
  */
 
-namespace EncyclopeadiaBundle;
+namespace EncyclopediaBundle;
 
 class MagicConstants
 {

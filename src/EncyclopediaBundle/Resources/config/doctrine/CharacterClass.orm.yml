@@ -1,7 +1,7 @@
-EncyclopeadiaBundle\Entity\CharacterClass:
+EncyclopediaBundle\Entity\CharacterClass:
     type: entity
     table: null
-    repositoryClass: EncyclopeadiaBundle\Repository\ClassRepository
+    repositoryClass: EncyclopediaBundle\Repository\ClassRepository
     id:
         id:
             type: integer
@@ -24,4 +24,8 @@ EncyclopeadiaBundle\Entity\CharacterClass:
             column: example_actions
         description:
             type: text
+    oneToMany:
+        skills:
+            targetEntity: EncyclopediaBundle\Entity\PassiveSkill
+            mappedBy: class
     lifecycleCallbacks: {  }

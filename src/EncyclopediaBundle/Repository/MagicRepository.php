@@ -1,6 +1,6 @@
 <?php
 
-namespace EncyclopeadiaBundle\Repository;
+namespace EncyclopediaBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

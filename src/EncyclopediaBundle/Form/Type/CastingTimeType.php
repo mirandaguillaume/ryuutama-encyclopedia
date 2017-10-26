@@ -3,27 +3,24 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 20/10/17
- * Time: 09:28.
+ * Time: 09:27.
  */
 
-namespace EncyclopeadiaBundle\Form\Type;
+namespace EncyclopediaBundle\Form\Type;
 
-use EncyclopeadiaBundle\MagicConstants;
+use EncyclopediaBundle\MagicConstants;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class MagicType extends AbstractType
+class CastingTimeType extends AbstractType
 {
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'choices' => array(
-                'Fall' => MagicConstants::FALL,
-                'Spring' => MagicConstants::SPRING,
-                'Summer' => MagicConstants::SUMMER,
-                'Winter' => MagicConstants::WINTER,
-                'Incantation' => MagicConstants::INCANTATION,
+                'Normal' => MagicConstants::NORMAL,
+                'Ritual' => MagicConstants::RITUAL,
             ),
             'choices_as_values' => true,
         ));

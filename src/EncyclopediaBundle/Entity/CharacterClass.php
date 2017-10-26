@@ -1,13 +1,12 @@
 <?php
 
-namespace EncyclopeadiaBundle\Entity;
+namespace EncyclopediaBundle\Entity;
 
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Class.
- *
  * @Vich\Uploadable
  */
 class CharacterClass
@@ -44,7 +43,6 @@ class CharacterClass
 
     /**
      * @Vich\UploadableField(mapping="character_class_images", fileNameProperty="image")
-     *
      * @var File
      */
     private $imageFile;

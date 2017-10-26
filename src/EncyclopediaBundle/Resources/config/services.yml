@@ -1,4 +1,4 @@
 services:
 #    encyclopeadia.example:
-#        class: EncyclopeadiaBundle\Example
+#        class: EncyclopediaBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
