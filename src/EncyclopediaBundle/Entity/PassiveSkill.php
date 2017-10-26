@@ -33,6 +33,11 @@ class PassiveSkill
     private $usableCircumstances;
 
     /**
+     * @var CharacterClass
+     */
+    private $class;
+
+    /**
      * Get id.
      *
      * @return int
@@ -136,5 +141,22 @@ class PassiveSkill
     public function getUsableCircumstances()
     {
         return $this->usableCircumstances;
+    }
+
+    /**
+     * @param CharacterClass $class
+     * @return $this
+     */
+    public function setClass(CharacterClass $class) {
+        $this->class = $class;
+
+        return $this;
+    }
+
+    /**
+     * @return CharacterClass
+     */
+    public function getClass() {
+        return $this->class;
     }
 }

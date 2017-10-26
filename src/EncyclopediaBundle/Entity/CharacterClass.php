@@ -2,6 +2,7 @@
 
 namespace EncyclopediaBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
@@ -49,6 +50,54 @@ class CharacterClass
      */
     private $imageFile;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $skills;
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getSkills()
+    {
+        return $this->skills;
+    }
+
+    /**
+     * @param PassiveSkill $skill
+     * @return $this
+     */
+    public function addSkill(PassiveSkill $skill)
+    {
+        $this->skills->add($skill);
+
+        return $this;
+    }
+
+    /**
+     * @param PassiveSkill $skill
+     * @return $this
+     */
+    public function removeSkill(PassiveSkill $skill)
+    {
+        $this->skills->removeElement($skill);
+
+        return $this;
+    }
+
+    /**
+     * @param ArrayCollection $skills
+     * @return $this
+     */
+    public function setSkills(ArrayCollection $skills) {
+        $this->skills = $skills;
+
+        return $this;
+    }
+
+    /**
+     * @param File|null $image
+     */
     public function setImageFile(File $image = null)
     {
         $this->imageFile = $image;
@@ -62,6 +111,9 @@ class CharacterClass
         }
     }
 
+    /**
+     * @return File
+     */
     public function getImageFile()
     {
         return $this->imageFile;
