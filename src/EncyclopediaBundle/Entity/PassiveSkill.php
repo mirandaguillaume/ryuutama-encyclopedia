@@ -3,7 +3,7 @@
 namespace EncyclopediaBundle\Entity;
 
 /**
- * PassiveSkill
+ * PassiveSkill.
  */
 class PassiveSkill
 {
@@ -32,9 +32,8 @@ class PassiveSkill
      */
     private $usableCircumstances;
 
-
     /**
-     * Get id
+     * Get id.
      *
      * @return int
      */
@@ -44,7 +43,7 @@ class PassiveSkill
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -58,7 +57,7 @@ class PassiveSkill
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -68,7 +67,7 @@ class PassiveSkill
     }
 
     /**
-     * Set effect
+     * Set effect.
      *
      * @param string $effect
      *
@@ -82,7 +81,7 @@ class PassiveSkill
     }
 
     /**
-     * Get effect
+     * Get effect.
      *
      * @return string
      */
@@ -92,7 +91,7 @@ class PassiveSkill
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
      *
@@ -106,7 +105,7 @@ class PassiveSkill
     }
 
     /**
-     * Get description
+     * Get description.
      *
      * @return string
      */
@@ -116,7 +115,7 @@ class PassiveSkill
     }
 
     /**
-     * Set usableCircumstances
+     * Set usableCircumstances.
      *
      * @param string $usableCircumstances
      *
@@ -130,7 +129,7 @@ class PassiveSkill
     }
 
     /**
-     * Get usableCircumstances
+     * Get usableCircumstances.
      *
      * @return string
      */
@@ -139,4 +138,3 @@ class PassiveSkill
         return $this->usableCircumstances;
     }
 }
-

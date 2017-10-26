@@ -3,15 +3,13 @@
  * Created by PhpStorm.
  * User: guillaume
  * Date: 26/10/17
- * Time: 16:55
+ * Time: 16:55.
  */
 
 namespace EncyclopediaBundle\Entity;
 
-
 class ActiveSkill extends PassiveSkill
 {
-
     /**
      * @var string
      */
@@ -23,7 +21,7 @@ class ActiveSkill extends PassiveSkill
     private $targetNumber;
 
     /**
-     * Set usedStat
+     * Set usedStat.
      *
      * @param string $usedStat
      *
@@ -37,7 +35,7 @@ class ActiveSkill extends PassiveSkill
     }
 
     /**
-     * Get usedStat
+     * Get usedStat.
      *
      * @return string
      */
@@ -47,7 +45,7 @@ class ActiveSkill extends PassiveSkill
     }
 
     /**
-     * Set targetNumber
+     * Set targetNumber.
      *
      * @param string $targetNumber
      *
@@ -61,7 +59,7 @@ class ActiveSkill extends PassiveSkill
     }
 
     /**
-     * Get targetNumber
+     * Get targetNumber.
      *
      * @return string
      */
@@ -69,5 +67,4 @@ class ActiveSkill extends PassiveSkill
     {
         return $this->targetNumber;
     }
-
 }
