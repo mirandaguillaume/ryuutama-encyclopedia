@@ -86,7 +86,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setName($name): Magic
+    public function setName($name): self
     {
         $this->name = $name;
 
@@ -110,7 +110,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setMPCost($mpCost): Magic
+    public function setMPCost($mpCost): self
     {
         $this->mpCost = $mpCost;
 
@@ -134,7 +134,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setDuration($duration): Magic
+    public function setDuration($duration): self
     {
         $this->duration = $duration;
 
@@ -158,7 +158,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setTarget($target): Magic
+    public function setTarget($target): self
     {
         $this->target = $target;
 
@@ -182,7 +182,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setLevel($level): Magic
+    public function setLevel($level): self
     {
         if (in_array($level, MagicConstants::MAGIC_LEVEL, true)) {
             $this->level = $level;
@@ -210,7 +210,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setSpellRange($spellRange): Magic
+    public function setSpellRange($spellRange): self
     {
         if (in_array($spellRange, MagicConstants::MAGIC_RANGE, true)) {
             $this->spellRange = $spellRange;
@@ -236,7 +236,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setCastingTime($castingTime): Magic
+    public function setCastingTime($castingTime): self
     {
         if (in_array($castingTime, MagicConstants::MAGIC_CASTING_TYPE, true)) {
             $this->castingTime = $castingTime;
@@ -262,7 +262,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setDescription($description): Magic
+    public function setDescription($description): self
     {
         $this->description = $description;
 
@@ -286,7 +286,7 @@ class Magic
      *
      * @return Magic
      */
-    public function setType($type): Magic
+    public function setType($type): self
     {
         if (in_array($type, MagicConstants::MAGIC_TYPE, true)) {
             $this->type = $type;
